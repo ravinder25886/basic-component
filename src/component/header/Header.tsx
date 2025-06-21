@@ -1,12 +1,13 @@
 import  { FC } from "react";
 type Props = {
-  title: string;
+  isLoggedIn: boolean;
 }; 
-const Header:FC<Props>=({title})=>{
+//Passing a Boolean
+const Header:FC<Props>=({isLoggedIn})=>{
     return(
       <>
           <div className='App-header'>
-          <p>Welcome to React! <b>{title}</b></p>
+          <p>{isLoggedIn ? "Welcome back!" : "Please log in."}</p>
         </div>
         </>
     );
